@@ -1,0 +1,35 @@
+@startuml diagrama
+class Libro {
+    - titulo : String
+    - autor : String
+    - precioDeReemplazo : double
+    + Libro(titulo : String, autor : String, precioDeReemplazo : double)
+    + getTitulo() : String
+    + setTitulo(titulo : String) : void
+    + getAutor() : String
+    + setAutor(autor : String) : void
+    + getPrecioDeReemplazo() : double
+    + setPrecioDeReemplazo(precio : double) : void
+    + toString() : String
+}
+
+class Prestamo {
+    - nombre : String
+    - libros : ArrayList<Libro>
+    - estatus : boolean
+    + Prestamo()
+    + Prestamo(nombreUsuario : String, estatus : boolean)
+    + getNombre() : String
+    + setNombre(nombre : String) : void
+    + getLibros() : ArrayList<Libro>
+    + setLibros(libros : ArrayList<Libro>) : void
+    + isEstatus() : boolean
+    + setEstatus(estatus : boolean) : void
+    + agregarLibro(libro : Libro) : void
+    + mostrarEstatus() : void
+    + mostrarDetallesDelPrestamo() : void
+    + calcularTotalDeReemplazo() : double
+}
+
+Prestamo o-- "0..*" Libro
+@enduml
