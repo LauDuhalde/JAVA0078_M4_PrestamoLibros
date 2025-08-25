@@ -119,6 +119,7 @@ public class Prestamo {
     /**
      * Muestra en consola los detalles del préstamo: nombre del usuario
      * y la lista de libros asociados.
+     * Además llama a calcularTotalDeReemplazo
      */
     public void mostrarDetallesDelPrestamo() {
         System.out.println("Usuario: " + this.nombre);
@@ -129,11 +130,14 @@ public class Prestamo {
     }
 
     /**
-     * Calcula el valor total de reemplazo de los libros asociados al préstamo.
-     * 
-     * @return suma del precio de reemplazo de todos los libros.
+     * Calcula el costo total de reemplazo de todos los libros asociados al préstamo.
+     * <p>
+     * Este método se declara como private porque solo se utiliza dentro de la clase
+     * para apoyar otras operaciones, evitando su acceso desde el exterior.
+     *
+     * @return el valor total del costo de reemplazo de los libros.
      */
-    public double calcularTotalDeReemplazo() {
+    private double calcularTotalDeReemplazo() {
         double total = 0;
         for (Libro libro : this.libros) {
             total += libro.getPrecioDeReemplazo();
