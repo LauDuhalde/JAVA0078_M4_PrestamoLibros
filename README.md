@@ -72,6 +72,7 @@ Prestamo 1:
 Usuario: Invitado
 Libro: Tu admiradora secreta, autor: Tessa Bailey
 Libro: Happy Place, autor: Emily Henry
+Total de reemplazo: $36990.0
 Préstamo activo
 ...
 ```
